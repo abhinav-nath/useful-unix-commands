@@ -134,3 +134,17 @@ $ grep "go\?lf" grep.txt
 > This time the o is missing in **glf**.<br>
 > **golf** has been a fine example<br>
 > let's talk about something besides **golf**<br>
+
+### Plus sign
+
+A plus sign will find when a search item occurs once or multiple times.
+Unlike the asterisk, at least one occurrence must be found to make a match.
+
+```shell
+$ grep "go+lf" grep.txt
+
+# need to escape it on mac
+$ grep "go\+lf" grep.txt
+```
+
+This time, the search returns **golf** and **goolf**, but it does not return **glf** because no **o** is found.
