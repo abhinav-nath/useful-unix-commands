@@ -108,13 +108,13 @@ $ grep "g[^0-9]lf" grep.txt
 
 An asterisk indicates the search item can occur zero, once, or multiple times.
 
+grep.txt
+
 ```shell
 grep "go*lf" grep.txt
 ```
 
 Your search returns lines with the words golf, glf, and goolf.
-
-<br>
 
 ### Question mark
 
@@ -147,4 +147,24 @@ $ grep "go+lf" grep.txt
 $ grep "go\+lf" grep.txt
 ```
 
-This time, the search returns **golf** and **goolf**, but it does not return **glf** because no **o** is found.
+This time, the search returns **golf** and **goolf**, but it does not return **glf** because no `o` is found.
+
+### Beginning-of-line (^) and end-of-line ($) anchors
+
+Putting a caret (^) at the beginning of a regular expression tells the search to only operate at the beginning of a line.
+Similarly, a dollar sign ($) is put at the end of a regular expression to indicate you only want to return results that match at the end of a line.
+
+grep.txt
+
+```
+golf has been a fine example
+let's talk about something besides golf
+```
+
+```shell
+$ grep "^golf" grep.txt
+$ golf has been a fine example
+
+$ grep "golf$" grep.txt
+$ let's talk about something besides golf
+```
