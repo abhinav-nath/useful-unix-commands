@@ -1,2 +1,3 @@
-# useful-unix-commands
-Useful day to day Unix commands
+# Helpful References
+
+* [freeCodeCamp - The Linux Command Handbook](https://www.freecodecamp.org/news/the-linux-commands-handbook "freeCodeCamp - The Linux Command Handbook")
